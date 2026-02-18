@@ -1,0 +1,16 @@
+pipeline {
+agent any
+stages {
+stage('clone'{
+steps{
+git url:'https://github.com/Geethanjali2905/jenkins-demo/new/main'
+branch 'main'
+}
+}
+stages('Run script') {
+steps {
+sh'chmod +x script.sh'
+}
+}
+}
+}
